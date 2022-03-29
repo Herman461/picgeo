@@ -1,0 +1,613 @@
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Light.eot');
+    src: local('Stolzl Light'), local('Stolzl-Light'),
+    url('../fonts/Stolzl-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stolzl-Light.woff2') format('woff2'),
+    url('../fonts/Stolzl-Light.woff') format('woff'),
+    url('../fonts/Stolzl-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Thin.eot');
+    src: local('Stolzl Thin'), local('Stolzl-Thin'),
+    url('../fonts/Stolzl-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stolzl-Thin.woff2') format('woff2'),
+    url('../fonts/Stolzl-Thin.woff') format('woff'),
+    url('../fonts/Stolzl-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl Book';
+    src: url('../fonts/Stolzl-Book.eot');
+    src: local('Stolzl Book'), local('Stolzl-Book'),
+    url('../fonts/Stolzl-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stolzl-Book.woff2') format('woff2'),
+    url('../fonts/Stolzl-Book.woff') format('woff'),
+    url('../fonts/Stolzl-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Regular.eot');
+    src: local('Stolzl Regular'), local('Stolzl-Regular'),
+    url('../fonts/Stolzl-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stolzl-Regular.woff2') format('woff2'),
+    url('../fonts/Stolzl-Regular.woff') format('woff'),
+    url('../fonts/Stolzl-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Bold.eot');
+    src: local('Stolzl Bold'), local('Stolzl-Bold'),
+    url('../fonts/Stolzl-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stolzl-Bold.woff2') format('woff2'),
+    url('../fonts/Stolzl-Bold.woff') format('woff'),
+    url('../fonts/Stolzl-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Medium.eot');
+    src: local('Stolzl Medium'), local('Stolzl-Medium'),
+    url('../fonts/Stolzl-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Stolzl-Medium.woff2') format('woff2'),
+    url('../fonts/Stolzl-Medium.woff') format('woff'),
+    url('../fonts/Stolzl-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+
+/* ====================== */
+
+:root {
+    --secondary-color: #FF8800;
+}
+body {
+    font-family: "Stolzl", sans-serif;
+    font-weight: 400;
+    color: #2E2E2E;
+}
+.fl-100 {
+    flex: 0 0 100%;
+}
+.navbar-nav .nav-link,
+a {
+    color: #2E2E2E;
+}
+
+.navbar-brand {
+    max-width: 113px;
+    height: auto;
+}
+
+.phone-number {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 3px;
+}
+.phone-number:last-child {
+    margin-bottom: 0;
+}
+.link-underline {
+    color: #FF8800;
+}
+.btn {
+    min-height: 56px;
+    line-height: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-right: 6px;
+    color: var(--bs-white);
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 0 #DD7600;
+}
+.header-social {
+    position: relative;
+}
+.header-social:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #B9B9B9;
+}
+
+
+hr {
+    margin: 0;
+    color: #B9B9B9;
+}
+
+.burger {
+    width: 38px;
+    height: 32px;
+    position: relative;
+    background-color: transparent;
+}
+
+.burger span {
+    background-color: #2E2E2E;
+    width: 100%;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.burger.collapsed span:first-child {
+    top: 0;
+}
+.burger.collapsed span:nth-child(2) {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.burger.collapsed span:last-child {
+    bottom: 0;
+}
+
+
+.burger:not(.collapsed) span:first-child {
+    transform: rotate(-45deg);
+    top: calc(50% - 2px);
+}
+.burger:not(.collapsed) span:nth-child(2) {
+    transform: scale(0);
+}
+.burger:not(.collapsed) span:last-child {
+    transform: rotate(45deg);
+    bottom: calc(50% - 2px);
+}
+
+@media (max-width: 767.98px) {
+    .navbar-nav {
+        width: 100%;
+        min-height: calc(100vh - 80px);
+        background-color: orange;
+    }
+    .nav-link {
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+    .nav-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.text-secondary {
+    color: #2E2E2E !important;
+}
+
+.intro {
+    min-height: 100vh;
+    background: url("../img/intro.jpg") center bottom / cover no-repeat;
+}
+.intro-image {
+    max-width: 100%;
+    margin-left: auto;
+}
+
+.intro-image img {
+    max-width: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+}
+
+@media (min-width: 992px) {
+    .intro-image {
+        flex: 0 0 50%;
+        transform: translate(-100%, 0);
+        position: relative;
+        min-height: 100vh;
+    }
+
+    .intro-image img {
+        max-height: 705px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+    }
+    .intro-content {
+        flex: 0 0 100%
+    }
+
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+    .intro-image {
+        max-width: 70%;
+    }
+}
+
+/*@media (max-width: 1399.98px) {*/
+/*    .intro {*/
+/*        min-height: 100vh;*/
+/*    }*/
+/*}*/
+
+
+.display-1 {
+    line-height: 107%;
+    font-size: 6.5rem;
+}
+
+.text-gradient {
+    background: linear-gradient(180deg, #FFB561 26.21%, #FF8800 92.67%), #FF8800;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lead {
+    line-height: 157%;
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 90px;
+    line-height: 107%;
+}
+
+@media (max-width: 1399.98px) {
+    h1 {
+        font-size: 70px;
+    }
+    .lead {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 40px;
+    }
+    .lead {
+        font-size: 16px;
+    }
+}
+
+
+
+/*================================================*/
+/* Типографика */
+/*================================================*/
+
+.display-2 {
+    font-size: calc(1.66rem + 3.9vw);
+}
+@media (min-width: 1200px) {
+    .display-2 {
+        font-size: 5rem;
+    }
+}
+
+p {
+   font-size: 16px;
+    line-height: 164%;
+    color: #000;
+    font-weight: 300;
+}
+.text-large {
+    font-size: 20px;
+}
+
+
+
+/*================================================*/
+/* Блок услуг */
+/*================================================*/
+.services {
+    background:
+            url('../img/background/home/services/01.png') -217px 35% / 768px 386px no-repeat,
+            url('../img/background/common/subtract.png') 0 bottom / 100% 305px no-repeat,
+            url('../img/background/home/services/02.png') 103% 63% / 705px 488px no-repeat;
+    padding-bottom: 200px;
+}
+
+/*@media (max-width: 992px) {*/
+/*    .services {*/
+/*        background:*/
+/*                url('../img/background/home/services/01.png') -217px 50% / 768px 386px no-repeat,*/
+/*                url('../img/background/home/services/02.png') 103% bottom / 705px 488px no-repeat;*/
+/*    }*/
+
+/*}*/
+
+.service-item {
+    min-height: 306px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 35px 40px;
+    overflow: hidden;
+}
+.service-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.service-item > h3 {
+    position: relative;
+    z-index: 5;
+    line-height: 1;
+}
+
+
+.service-number {
+    position: absolute;
+    top: 18px;
+    left: -84px;
+    font-size: 335px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 76.11%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
+
+.service-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(28, 18, 8, 0.5);
+    z-index: 3;
+}
+
+@media (max-width: 1200px) {
+    .service-item {
+        padding: 15px;
+    }
+    .service-number {
+        font-size: 250px;
+    }
+}
+@media (max-width: 540px) {
+    .service-item {
+        min-height: 140px;
+    }
+    .service-number {
+        left: -52.28px;
+        top: 8.2px;
+        font-size: 150px;
+    }
+}
+
+.about-video {
+    flex: 0 0 50%;
+    clip-path: polygon(50% 0, 100% 38%, 100% 100%, 20% 100%, 0 0);
+    transform: translate(-100%, 0);
+}
+.about {
+    overflow: hidden;
+}
+.about > .container-lg {
+    flex: 0 0 100%;
+}
+
+/*================================================*/
+/* Блок популярное */
+/*================================================*/
+
+.popular {
+    background: url("../img/background/home/popular/01.png") right center no-repeat;
+    background-size: 100% 171px;
+}
+.popular .slick-list {
+    margin: 0 -12px;
+}
+.popular .slick-slide {
+    margin: 0 12px;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.popular .slick-track {
+    display: flex;
+}
+
+.popular-image {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 16%, 100% 100%, 0 100%, 0 32%);
+}
+
+.popular-item-content {
+    padding: 20px 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.15);
+}
+.popular-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 227px;
+}
+.popular-title {
+    font-size: 24px;
+    position: relative;
+    flex: 1 1 auto;
+}
+.popular-item-content > p {
+    flex: 1 1 auto;
+}
+.popular-prices {
+    flex: 1 1 auto;
+}
+
+.popular-title span {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+    padding-right: 55px;
+    background-color: #fff;
+    max-width: 215px;
+    line-height: 1.3;
+    top: -1px;
+    clip-path: polygon(0% 0%, 100% 0, 70% 100%, 0% 100%);
+}
+
+
+
+.popular-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -16px;
+    width: 8px;
+    height: 24px;
+    background-color: #FF8800;
+    z-index: 3;
+}
+
+.popular-title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -16px;
+    width: 100%;
+    height: 24px;
+    background: linear-gradient(95.1deg, #FF8800 -10.46%, #FFC786 118.67%);
+    z-index: 2;
+}
+
+.popular-current-price {
+    font-size: 30px;
+}
+
+.popular-old-price {
+    font-size: 16px;
+    opacity: 0.3;
+}
+
+@media (max-width: 992px) {
+    .popular-title {
+        font-size: 21px;
+    }
+    .popular-current-price {
+        font-size: 26px;
+    }
+    .popular-old-price {
+        font-size: 14px;
+    }
+}
+@media (max-width: 767px) {
+    .popular .slick-list {
+        margin: 0 -10px;
+    }
+    .popular .slick-slide {
+        margin: 10px;
+    }
+}
