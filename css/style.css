@@ -611,3 +611,101 @@ p {
         margin: 10px;
     }
 }
+
+
+/*================================================*/
+/* Блок оборудование */
+/*================================================*/
+
+
+.equipment {
+    background-color: #E5E5E5;
+    padding: 115px 0;
+}
+
+
+.container-lg {
+}
+
+.display-2 {
+}
+
+.fw-bold {
+}
+
+.equipment-item {
+    padding: 15px 31px;
+    margin-bottom: 32px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.equipment-item.active {
+    box-shadow: 0 0 31px rgba(0, 0, 0, 0.16);
+}
+.equipment-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.equipment-item-title {
+    font-size: 24px;
+}
+
+.equipment-image {
+
+}
+
+.equipment-item-image {
+    max-width: 130px;
+}
+
+.equipment-item-image img {
+    object-fit: contain;
+    height: 90px;
+}
+
+
+
+.col-6 {
+}
+
+.offset-1 {
+}
+
+.equipment-tab {
+}
+
+.equipment-tab-image {
+}
+
+.equipment-tab-title {
+    font-size: 40px;
+}
+
+/*.equipment-tab-btn {*/
+/*    max-width: 410px;*/
+/*}*/
+
+.text-large {
+}
+
+@media (max-width: 992px) {
+    .equipment {
+        padding: 70px 0;
+    }
+    .equipment-item-image img {
+        height: 70px;
+    }
+    .equipment-item-title {
+        font-size: 20px;
+    }
+    .equipment-tab-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .equipment {
+        padding: 15px 0;
+    }
+}
