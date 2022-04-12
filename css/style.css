@@ -169,6 +169,7 @@ body {
     font-weight: 400;
     color: #2E2E2E;
 }
+
 .fl-100 {
     flex: 0 0 100%;
 }
@@ -192,6 +193,7 @@ a {
 }
 .link-underline {
     color: #FF8800;
+    text-decoration: underline;
 }
 .btn {
     min-height: 56px;
@@ -223,6 +225,9 @@ a {
 hr {
     margin: 0;
     color: #B9B9B9;
+}
+.bg-transparent {
+    background-color: transparent;
 }
 
 .burger {
@@ -281,49 +286,49 @@ hr {
         margin-bottom: 20px;
     }
 }
-
 .text-secondary {
-    color: #2E2E2E !important;
+    color: #FF8800 !important;
 }
 
 .intro {
     min-height: 100vh;
     background: url("../img/intro.jpg") center bottom / cover no-repeat;
 }
-.intro-image {
+.outer-image {
     max-width: 100%;
-    margin-left: auto;
 }
 
-.intro-image img {
+.outer-image img {
     max-width: 100%;
     object-fit: contain;
     object-position: right bottom;
 }
 
 @media (min-width: 992px) {
-    .intro-image {
+    .outer-image {
         flex: 0 0 50%;
         transform: translate(-100%, 0);
         position: relative;
         min-height: 100vh;
     }
 
-    .intro-image img {
-        max-height: 705px;
+    .outer-image img {
         position: absolute;
         bottom: 0;
         right: 0;
         height: 100%;
     }
-    .intro-content {
+    .intro-image img {
+        max-height: 705px;
+    }
+    .inner-content {
         flex: 0 0 100%
     }
 
 }
 
 @media (max-width: 992px) and (min-width: 767px) {
-    .intro-image {
+    .outer-image {
         max-width: 70%;
     }
 }
@@ -344,6 +349,10 @@ hr {
     background: linear-gradient(180deg, #FFB561 26.21%, #FF8800 92.67%), #FF8800;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.text-bold {
+    font-weight: 700;
 }
 
 .lead {
@@ -380,14 +389,23 @@ h1 {
 /* Типографика */
 /*================================================*/
 
+
 .display-2 {
-    font-size: calc(1.66rem + 3.9vw);
+    font-size: 60px;
+    line-height: 110%;
 }
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
     .display-2 {
-        font-size: 5rem;
+        font-size: 40px;
     }
 }
+
+@media (max-width: 767px) {
+    .display-2 {
+        font-size: 31px;
+    }
+}
+
 
 p {
    font-size: 16px;
@@ -707,5 +725,203 @@ p {
 @media (max-width: 767px) {
     .equipment {
         padding: 15px 0;
+    }
+}
+
+/*================================================*/
+/* Блок "Получить рекомендации" */
+/*================================================*/
+
+
+.get-recom {
+    min-height: 100vh;
+    padding: 60px 0;
+    background: url("../img/background/home/get-recom/01.jpg") center center / cover no-repeat;
+}
+
+.get-recom-discount__image {
+    flex: 0 0 120px;
+}
+
+.get-recom__form {
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(5px);
+    padding: 40px 25px;
+}
+
+@media (max-width: 992px) {
+    .get-recom {
+        padding: 30px 0 8px 0;
+    }
+    .get-recom__form {
+        padding: 30px 22px;
+    }
+}
+
+.get-recom__input {
+    margin-bottom: 25px;
+    min-height: 55px;
+    border: 1px solid #ECECEC;
+}
+
+.get-recom__input::placeholder {
+    font-family: "Stolzl", sans-serif;
+    color: #B9B9B9;
+    font-weight: 300;
+}
+
+
+.get-recom__agreement {
+    font-size: 12px;
+}
+.get-recom__btn {
+    min-height: 70px;
+    margin-bottom: 10px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgb(255 136 0 / 10%);
+    border: 1px solid #FF8800;
+}
+
+
+
+
+.services-description {
+    padding: 120px 0;
+}
+
+@media (max-width: 992px) {
+    .services-description {
+        padding: 50px 0;
+    }
+}
+
+.container-lg {
+}
+
+.services-description__item {
+    margin-bottom: 94px;
+}
+
+
+
+.services-description__item:last-child {
+    margin-bottom: 0;
+}
+
+.services-description__image img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .services-description__item {
+        margin-bottom: 40px;
+    }
+    .services-description__button br {
+        display: none;
+    }
+    .services-description__button {
+        word-break: break-word;
+    }
+    .services-description__image img {
+        max-height: 442px;
+    }
+    .services-description__button img {
+        transition: transform 0.3s ease 0s;
+    }
+    .services-description__button:not(.collapsed) img {
+        transform: rotate(-180deg);
+    }
+}
+
+.accordion-collapse {
+    padding-top: 21px;
+}
+
+.link-underline:hover {
+    color: #FF8800;
+}
+
+
+.advantages {
+    padding: 20px 0 120px 0;
+}
+
+.advantages__image {
+    margin-bottom: 13px;
+    width: 190px;
+    height: 162px;
+}
+.advantages__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+    .advantages__image {
+        margin-bottom: 13px;
+        width: 165px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .advantages {
+        padding: 20px 0 50px 0;
+    }
+}
+
+
+
+
+.areas__item {
+    height: 100%;
+    position: relative;
+}
+.areas__row {
+    min-height: 416px;
+}
+.areas__item_big {
+    height: 100%;
+}
+
+@media (max-width: 992px) {
+    .areas__item {
+        min-height: 320px;
+    }
+}
+.areas__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.areas__text {
+    position: relative;
+    font-weight: 300;
+    font-size: 18px;
+    width: 100%;
+    z-index: 2;
+    padding: 20px 25px;
+    line-height: 120%;
+    background-color: rgba(32, 32, 32, 0.58);
+}
+
+@media (max-width: 1200px) {
+    .areas__text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .areas__text {
+        padding: 10px 15px;
     }
 }

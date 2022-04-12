@@ -1,0 +1,173 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+   @font-face {
+      font-family: $font_name;
+      font-display: swap;
+      src: url('../fonts/#{$file_name}.woff') format('woff'),
+         url('../fonts/#{$file_name}.woff2') format('woff2');
+      font-weight: #{$weight};
+      font-style: #{$style};
+   }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1845;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+
+
+$mainColor: #464646;
+$secondaryColor: #979797;
+
+@import 'fonts.scss';
+//@import 'icons.scss';
+//@import 'mixins.scss';
+@import 'mixins.scss';
+@import 'reset.scss';
+@import 'forms.scss';
+@import 'swiper.scss';
+@import 'ui.scss';
+@import 'ibg.scss';
+@import 'header.scss';
+@import "home.scss";
+@import 'footer.scss';
+@import 'catalog.scss';
+@import 'product.scss';
+@import 'about.scss';
+
+body {
+   color: $mainColor;
+   @include adaptiv-value('font-size', 18, 16, 1);
+   font-family: 'Resist', sans-serif;
+   font-weight: 300;
+   &._lock {
+      overflow: hidden;
+   }
+}
+a {
+   color: $mainColor;
+   transition: color 0.3s ease 0s;
+   @media (any-hover: hover) {
+      &:hover {
+         color: $secondaryColor;
+      }
+   }
+}
+button {
+   cursor: pointer;
+}
+svg {
+   fill: $mainColor;
+   transition: fill 0.3s ease 0s;
+   @media (any-hover: hover) {
+      &:hover {
+         fill: $secondaryColor;
+      }
+   }
+}
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+._container {
+   max-width: $maxWidthContainer + px;
+   margin: 0 auto;
+   padding: 0 10px;
+}
+
+.page {
+   flex: 1 1 auto;
+   &__content {
+      @include adaptiv-value('padding-top', 70, 49, 1);
+      display: flex;
+      align-items: flex-start;
+      @media (max-width: $md3+px) {
+         padding-top: 100px;
+      }
+   }
+   &__body {
+      flex: 1 1 auto;
+      @media (min-width: 1600px) {
+         padding: 0 0 0 46px;
+      }
+      @media (min-width: $md2+px) {
+         padding: 0 0 0 30px;
+      }
+   }
+
+
+   &__about {
+      @include adaptiv-value('padding-top', 79, 49, 1);
+      padding-bottom: 101px;
+   }
+   &__catalog {
+      @include adaptiv-value('padding-top', 86, 49, 1);
+   }
+   &__products {
+      padding-top: 78px;
+   }
+   &__side {
+      display: none;
+      @media (min-width: $md2+px) {
+         display: block;
+         position: relative;
+         flex: 0 0 300px;
+         padding-bottom: 40px;
+         &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(270deg, rgba(199, 210, 217, 0) 0%, rgba(214, 223, 229, 0.810998) 21.87%, rgba(216, 225, 231, 0.936842) 34.89%, #D9E2E8 49.47%, rgba(215, 224, 230, 0.948454) 63%, rgba(210, 220, 226, 0.788152) 76.54%, rgba(186, 195, 202, 0) 99.97%);
+         }
+      }
+   }
+}
+
+.content {
+   // .content__title
+   &__title {
+      margin: 0 0 20px 0;
+   }
+
+   // .content__item
+   &__item {
+      margin: 0 0 30px 0;
+      &:last-child {
+         margin: 0;
+      }
+   }
+}
+
+.item-content {
+   // .item-content__title
+   &__title {
+      font-weight: 300;
+      line-height: 125%;
+      margin: 0 0 10px 0;
+      @include adaptiv-value('font-size', 30, 21, 1);
+   }
+
+   // .item-content__text
+   &__text {
+      margin: 0 0 20px 0;
+   }
+   &__subcontent {
+      padding: 0 0 0 20px;
+   }
+   // .item-content__subtitle
+   &__subtitle {
+      font-weight: 300;
+      margin: 0 0 10px 0;
+      @include adaptiv-value('font-size', 27, 19, 1);
+   }
+}

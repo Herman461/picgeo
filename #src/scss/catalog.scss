@@ -1,0 +1,233 @@
+
+.breadcrumbs {
+  margin: 0 0 40px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-height: 30px;
+  &__link,
+  &__item {
+    @include adaptiv-value('font-size', 28, 18, 1);
+  }
+  &__link {
+    color: rgba(70, 70, 70, 0.46);
+  }
+  &__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    white-space: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    li {
+      display: inline-block;
+      flex: 0 0 auto;
+      margin: 0 15px 0 0;
+      padding: 0 15px 0 0;
+      position: relative;
+      &::after {
+        content: "/";
+        position: absolute;
+        @include adaptiv-value('font-size', 28, 18, 1);
+        top: 0;
+        right: 0;
+      }
+
+      &:last-child {
+        margin: 0;
+        &::after {
+          display: none;
+        }
+      }
+
+    }
+  }
+}
+.side {
+  // .side__title
+  &__title {
+    @include adaptiv-value('font-size', 50, 26, 1);
+    @include adaptiv-value('margin-bottom', 52, 30, 1);
+    font-weight: 100;
+  }
+}
+
+.filter {
+  padding: 0 25px 0 0;
+  // .filter__body
+  &__body {
+  }
+
+  // .filter__item
+  &__item {
+    padding: 10px 0;
+  }
+
+  &__btn {
+    @include adaptiv-value('font-size', 20, 14, 1);
+    display: flex;
+    padding: 2px 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 100;
+    background-color: #D9E2E8;
+    border: 1px solid #B3C1CB;
+    text-transform: uppercase;
+    width: 100%;
+    min-height: 60px;
+    margin: 14px 0 0 0;
+  }
+
+  // .filter__content
+  &__content {
+    @media (max-width: $md2+px) {
+      position: absolute;
+      top: calc(100% + 4px);
+      border: 1px solid $mainColor;
+      left: 0;
+      height: auto;
+      width: 100%;
+      background-color: #fff;
+      z-index: 3;
+      padding: 15px;
+    }
+  }
+
+  // .filter__title
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    font-weight: 100;
+    font-size: 20px;
+    @media (min-width: $md2+px) {
+      @include adaptiv-value('font-size', 28, 22, 1);
+    }
+
+    svg {
+      height: 12px;
+      width: 12px;
+      transition: transform 0.3s ease 0s;
+    }
+
+    &._active {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  // .filter__list
+  &__list {
+    padding: 20px 0 0 0;
+
+    li {
+      margin: 0 0 20px 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.checkbox {
+  // .checkbox__input
+  &__input {
+  }
+
+  // .checkbox__text
+  &__text {
+  }
+}
+
+.catalog {
+  &__title {
+    @include adaptiv-value('margin-bottom', 35, 25, 1);
+  }
+  &__actions {
+    margin: 0 0 25px 0;
+  }
+  &__more {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.actions-catalog {
+  display: none;
+  @media (max-width: $md2+px) {
+    min-height: 42px;
+    border: 2px solid #DBE2E8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__select {
+    margin: 0 10px 0 0;
+    flex: 1 1 auto;
+  }
+
+  &__filter-btn {
+    @include adaptiv-value('font-size', 18, 16, 1);
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3px;
+    max-width: 110px;
+
+    span {
+      font-weight: 100;
+    }
+
+    svg {
+      margin: 0 0 0 8px;
+      flex: 0 0 18px;
+      height: 13px;
+    }
+  }
+}
+
+
+.catalog {
+  // .catalog__breadcrumbs
+  &__breadcrumbs {
+  }
+
+  // .catalog__products
+  &__products {
+  }
+}
+
+.products-catalog {
+  @media (min-width: 1600px) {
+    margin: 0 -19px;
+  }
+  @media (min-width: $md2+px) {
+    margin: 0 -10px;
+  }
+  @media (min-width: 510px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+  // .products-catalog__column
+  &__column {
+    flex: 0 1 50%;
+    margin: 0 0 35px 0;
+    @media (min-width: 1600px) {
+      padding: 0 19px;
+    }
+    @media (min-width: $md2+px) {
+      padding: 0 10px;
+    }
+    @media (min-width: 510px) {
+      padding: 0 5px;
+    }
+  }
+}

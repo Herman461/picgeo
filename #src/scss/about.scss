@@ -1,0 +1,60 @@
+.about {
+  // .about__title
+  &__title {
+    @include adaptiv-value('margin-bottom', 40, 30, 1);
+  }
+
+  // .about__text
+  &__text {
+    text-align: center;
+    @include adaptiv-value('margin-bottom', 35, 27, 1);
+    // .about__text_bottom
+    &_bottom {
+      padding: 40px 0;
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 7px;
+        background: linear-gradient(270deg, rgba(199, 210, 217, 0) 0%, #D9E2E8 49.47%, rgba(186, 195, 202, 0) 99.97%);
+        @media (max-width: 1600px) {
+          height: 3px;
+        }
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+    }
+  }
+
+  // .about__images
+  &__images {
+    @media (min-width: $md3+px) {
+      display: flex;
+      margin: 0 -13px;
+    }
+    @include adaptiv-value('margin-bottom', 55, 30, 1)
+  }
+  &__image-col {
+    @media (min-width: $md3+px) {
+      padding: 0 13px;
+      flex: 0 1 50%;
+    }
+    @media (max-width: $md3+px) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+
+  // .about__image
+  &__image {
+    width: 100%;
+    padding: 0 0 97% 0;
+  }
+}
